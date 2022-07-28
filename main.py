@@ -1,7 +1,10 @@
 import requests
 import disnake,os
 from disnake.ext import commands
-intents = disnake.Intents.all()
+intents = disnake.Intents.default()
+intents.members = True
+intents.message_content = True
+intents.presences = True
 bot = commands.Bot(command_prefix="ez!",sync_commands_debug=True, intents=intents)
 guild_id="17617271731222"
 role_id="5272737284728294"
